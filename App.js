@@ -32,7 +32,9 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
+
       <GoalInput onAddGoal={addGoalHandler} />
+      
       <FlatList
         keyExtractor={(item, index) => item.id}
         data={courseGoals}
@@ -43,6 +45,7 @@ export default function App() {
             title={itemData.item.value} />
         )}
       />
+      
     </View>
   );
 }
